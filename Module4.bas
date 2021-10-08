@@ -2,13 +2,12 @@ Attribute VB_Name = "Module4"
 Sub addQuantity()
 
 'add quantity of part - logic similar like in module2
-For i = 2 To Sheets("parts_station").Range("A" & Rows.Count).End(xlUp).Row
+For i = 6 To Sheets("parts_station").Range("A" & Rows.Count).End(xlUp).Row
     psPSTemp = Sheets("parts_station").Cells(i, 3)
     psPS = Mid(psPSTemp, 1, 9)
     nrPS = Sheets("parts_station").Cells(i, 6)
     fcPS = Sheets("parts_station").Cells(i, 7)
-
-        For j = 3 To Sheets("04").Range("A" & Rows.Count).End(xlUp).Row
+        For j = 3 To Sheets("04").Range("G" & Rows.Count).End(xlUp).Row
             ps04 = Sheets("04").Cells(j, 8)
             nr04 = Sheets("04").Cells(j, 21)
             fc04 = Sheets("04").Cells(j, 24)
@@ -27,6 +26,6 @@ For i = 2 To Sheets("parts_station").Range("A" & Rows.Count).End(xlUp).Row
                     End If
                 End If
 
-50 Next j
+50      Next j
 100 Next i
 End Sub

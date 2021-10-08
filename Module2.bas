@@ -2,7 +2,7 @@ Attribute VB_Name = "Module2"
 Sub numbersConnector()
 
 'Get number 1 (extraction 1)
-For i = 2 To Sheets("parts_station").Range("A" & Rows.Count).End(xlUp).Row
+For i = 6 To Sheets("parts_station").Range("A" & Rows.Count).End(xlUp).Row
     nrPsaPSTemp = Sheets("parts_station").Cells(i, 6)
     'Get 8 digits from number (end of number can be differ depending on extraction)
     nrPsaPS = Mid(nrPsaPSTemp, 1, 8)
